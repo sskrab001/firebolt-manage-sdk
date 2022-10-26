@@ -20,4 +20,4 @@ import { Power } from '@firebolt-js/manage'
 ## Contributing
 The Firebolt Manage SDK is built using the Firebolt OpenRPC toolset:
 
-See [Firebolt OpenRPC](https://www.github.com/rdkcentral/firebolt-openrpc/), for more info.
+See [Firebolt OpenRPC](https://www.github.com/rdkcentral/firebolt-openrpc/), for more info
