@@ -7,69 +7,6 @@
     },
     "methods": [
         {
-            "name": "onRequestContentPolicy",
-            "tags": [
-                {
-                    "name": "capabilities",
-                    "x-provides": "xrn:firebolt:capability:privacy:content"
-                },
-                {
-                    "name": "event",
-                    "x-response": {
-                        "$ref": "https://meta.comcast.com/firebolt/privacy#/definitions/ContentPolicy",
-                        "examples": [
-                            {
-                                "enableRecommendations": true,
-                                "shareWatchHistory": false,
-                                "rememberWatchedPrograms": true
-                            }
-                        ]
-                    }
-                }
-            ],
-            "summary": "Request the content privacy settings for a specific app.",
-            "params": [],
-            "result": {
-                "name": "result",
-                "schema": {
-                    "allOf": [
-                        {
-                            "$ref": "https://meta.comcast.com/firebolt/types#/definitions/ProviderRequest"
-                        },
-                        {
-                            "type": "object",
-                            "properties": {
-                                "parameters": {
-                                    "type": "object",
-                                    "required": ["appId"],
-                                    "properties": {
-                                        "appId": {
-                                            "type": "string"
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    ]
-                }
-            },
-            "examples": [
-                {
-                    "name": "Default Example",
-                    "params": [],
-                    "result": {
-                        "name": "result",
-                        "value": {
-                            "correlationId": "xyz",
-                            "parameters": {
-                                "appId": "some-app"
-                            }
-                        }
-                    }
-                }
-            ]
-        },
-        {
             "name": "shareWatchHistory",
             "tags": [
                 {
@@ -203,68 +140,6 @@
                     }
                 }
             ]
-        },
-        {
-            "name": "onRequestAdvertisingPolicy",
-            "tags": [
-                {
-                    "name": "capabilities",
-                    "x-provides": "xrn:firebolt:capability:privacy:advertising"
-                },
-                {
-                    "name": "event",
-                    "x-response": {
-                        "type": "object",
-                        "required": [
-                            "limitAdTracking"
-                        ],
-                        "properties": {
-                            "limitAdTracking": {
-                                "type": "boolean"
-                            }
-                        },
-                        "examples": [
-                            {
-                                "limitAdTracking": true
-                            }
-                        ]
-                    }
-                }
-            ],
-            "summary": "Request the advertising privacy settings for the account or device.",
-            "params": [],
-            "result": {
-                "name": "result",
-                "schema": {
-                                                "allOf": [
-                                {
-                                    "$ref": "https://meta.comcast.com/firebolt/types#/definitions/ProviderRequest"
-                                },
-                                {
-                                    "type": "object",
-                                    "properties": {
-                                        "parameters": {
-                                            "const": null
-                                        }
-                                    }
-                                
-                        }
-                    ]
-                }
-            },
-            "examples": [
-                {
-                    "name": "Default Example",
-                    "params": [],
-                    "result": {
-                        "name": "result",
-                        "value": {
-                            "correlationId": "xyz",
-                            "parameters": null
-                        }
-                    }
-                }
-            ]            
         },
         {
             "name": "limitAdTracking",

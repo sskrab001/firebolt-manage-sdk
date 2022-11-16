@@ -7,44 +7,6 @@
     },
     "methods": [
         {
-            "name": "onRequestSettings",
-            "tags": [
-                {
-                    "name": "capabilities",
-                    "x-provides": "xrn:firebolt:capability:accessibility:closedcaptions",
-                    "x-allow-focus": false
-                },
-                {
-                    "name": "event",
-                    "x-response": {
-                        "description": "The result of the provider response, containing the closed-captions settings.",
-                        "$ref": "https://meta.comcast.com/firebolt/accessibility#/definitions/ClosedCaptionsSettings"
-                    }
-                }
-            ],
-            "summary": "Dispatches a request for the current closed-captions settings to the closed-captions settings provider.",
-            "params": [],
-            "result": {
-                "name": "result",
-                "schema": {
-                    "$ref": "#/components/schemas/ClosedCaptionsSettingsProviderRequest"
-                }
-            },
-            "examples": [
-                {
-                    "name": "Getting the closed captions settings",
-                    "params": [],
-                    "result": {
-                        "name": "result",
-                        "value": {
-                            "correlationId": "123",
-                            "parameters": null
-                        }
-                    }
-                }
-            ]
-        },
-        {
             "name": "enabled",
             "tags": [
                 {
