@@ -15,16 +15,6 @@ class AccPovider implements Account.SessionProvider {
   }
 }
 
-class CCProvider implements ClosedCaptions.SettingsProvider {
-  settings(
-    parameters: object,
-    session: ClosedCaptions.ProviderSession
-  ): Promise<ClosedCaptions.ClosedCaptionsSettings> {
-    session.correlationId;
-    return Promise.resolve(null);
-  }
-}
-
 class LCMProvider implements LifecycleManagement.StateProvider {
   ready(
     parameters: LifecycleManagement.LifecycleReadyParameters,
@@ -45,14 +35,6 @@ class LCMProvider implements LifecycleManagement.StateProvider {
     return Promise.resolve(null);
   }
 }
-
-test("ClosedCaptions.provide() declarations ", () => {
-  ClosedCaptions.provide(
-    "xrn:firebolt:capability:accessibility:closedcaptions",
-    new CCProvider()
-  );
-  expect(1).toBe(1);
-});
 
 test("Account.provide() declarations", () => {
   Account.provide("xrn:firebolt:capability:token:session", new AccPovider());

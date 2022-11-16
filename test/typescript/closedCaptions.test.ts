@@ -105,12 +105,3 @@ test("clear", () => {
   const result = ClosedCaptions.clear(1);
   expect(result).toBe(undefined);
 });
-
-test("provide", () => {
-  expect(() => {
-    ClosedCaptions.provide(
-      "xrn:firebolt:capability:accessibility:closedcaptions",
-      {}
-    );
-  }).toThrow();
-});

@@ -19,15 +19,6 @@
 import { test, expect } from "@jest/globals";
 import { VoiceGuidance } from "../../dist/lib/firebolt-manage";
 
-class VGProvider implements VoiceGuidance.SettingsProvider {
-  settings(
-    parameters: void,
-    session: object
-  ): Promise<VoiceGuidance.VoiceGuidanceSettings> {
-    return Promise.resolve(null);
-  }
-}
-
 test("VoiceGuidance.enabled()", () => {
   return VoiceGuidance.enabled().then((res) => {
     expect(res).toEqual(true);
@@ -54,20 +45,6 @@ test("VoiceGuidance.once() for enabledChanged event", () => {
   });
 });
 
-test("VoiceGuidance.listen() for requestSettings event", () => {
-  return VoiceGuidance.listen("requestSettings", () => {}).then(
-    (res: number) => {
-      expect(res > 0).toBe(true);
-    }
-  );
-});
-
-test("VoiceGuidance.once() for requestSettings event", () => {
-  return VoiceGuidance.once("requestSettings", () => {}).then((res: number) => {
-    expect(res > 0).toBe(true);
-  });
-});
-
 test("VoiceGuidance.listen() for speedChanged event", () => {
   return VoiceGuidance.listen("speedChanged", () => {}).then((res: number) => {
     expect(res > 0).toBe(true);
@@ -83,18 +60,4 @@ test("VoiceGuidance.once() for speedChanged event", () => {
 test("VoiceGuidance.clear()", () => {
   const result = VoiceGuidance.clear(2);
   expect(result).toBeFalsy();
-});
-
-test("VoiceGuidance.provide() declarations ", () => {
-  VoiceGuidance.provide(
-    "xrn:firebolt:capability:accessibility:voiceguidance",
-    new VGProvider()
-  );
-  expect(1).toBe(1);
-});
-
-test("VoiceGuidance.provide() with blank object", () => {
-  expect(() => {
-    VoiceGuidance.provide("xrn:firebolt:capability:accessibility:voiceguidance", {});
-  }).toThrow();
 });
