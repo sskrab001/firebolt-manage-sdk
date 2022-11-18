@@ -14,7 +14,7 @@
                 },
                 {
                     "name": "capabilities",
-                    "x-manages": [
+                    "x-uses": [
                         "xrn:firebolt:capability:privacy:content"
                     ]
                 }
@@ -59,7 +59,7 @@
                 },
                 {
                     "name": "capabilities",
-                    "x-manages": [
+                    "x-uses": [
                         "xrn:firebolt:capability:privacy:content"
                     ]
                 }
@@ -104,7 +104,7 @@
                 },
                 {
                     "name": "capabilities",
-                    "x-manages": [
+                    "x-uses": [
                         "xrn:firebolt:capability:privacy:content"
                     ]
                 }
@@ -149,7 +149,7 @@
                 },
                 {
                     "name": "capabilities",
-                    "x-manages": [
+                    "x-uses": [
                         "xrn:firebolt:capability:privacy:advertising"
                     ]
                 }
