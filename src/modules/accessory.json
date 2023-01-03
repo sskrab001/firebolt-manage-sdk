@@ -202,7 +202,7 @@
         {
           "name": "capabilities",
           "x-uses": [
-            "xrn:firebolt:capability:accessory:pair"
+            "xrn:firebolt:capability:accessory:list"
           ]
         }
       ],

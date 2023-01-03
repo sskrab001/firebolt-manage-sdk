@@ -19,8 +19,8 @@
 import { test, expect } from "@jest/globals";
 import { Localization } from "../../dist/lib/firebolt-manage";
 
-test("Localization.localilty()", () => {
-  return Localization.localilty().then((res: string) => {
+test("Localization.locality()", () => {
+  return Localization.locality().then((res: string) => {
     expect(res).toBe("Philadelphia");
   });
 });
@@ -50,7 +50,7 @@ test("Localization.locale()", () => {
 });
 
 test("Localization.listen()", () => {
-  return Localization.listen("localiltyChanged", () => {}).then(
+  return Localization.listen("localityChanged", () => {}).then(
     (res: Number) => {
       expect(res > 0).toBe(true);
     }
@@ -58,7 +58,7 @@ test("Localization.listen()", () => {
 });
 
 test("Localization.once()", () => {
-  return Localization.once("localiltyChanged", () => {}).then((res: Number) => {
+  return Localization.once("localityChanged", () => {}).then((res: Number) => {
     expect(res > 0).toBe(true);
   });
 });

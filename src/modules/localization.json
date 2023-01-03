@@ -7,7 +7,7 @@
     },
     "methods": [
         {
-            "name": "localilty",
+            "name": "locality",
             "tags": [
                 {
                     "name": "property"
