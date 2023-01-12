@@ -7,59 +7,6 @@
     },
     "methods": [
         {
-            "name": "onRequestSettings",
-            "tags": [
-                {
-                    "name": "capabilities",
-                    "x-provides": "xrn:firebolt:capability:settings:closedcaptions",
-                    "x-allow-focus": false
-                },
-                {
-                    "name": "event",
-                    "x-response": {
-                        "description": "The result of the provider response, containing the closed-captions settings.",
-                        "$ref": "https://meta.comcast.com/firebolt/accessibility#/definitions/ClosedCaptionsSettings"
-                    }
-                }
-            ],
-            "summary": "Dispatches a request for the current closed-captions settings to the closed-captions settings provider.",
-            "params": [
-                {
-                    "name": "listen",
-                    "summary": "Whether or not to listen for requests to this interface method.",
-                    "schema": {
-                        "type": "boolean"
-                    }
-                }
-            ],
-            "result": {
-                "name": "result",
-                "schema": {
-                    "oneOf": [
-                        {
-                            "$ref": "https://meta.comcast.com/firebolt/types#/definitions/ListenResponse"
-                        },
-                        {
-                            "$ref": "#/components/schemas/ClosedCaptionsSettingsProviderRequest"
-                        }
-                    ]
-                }
-            },
-            "examples": [
-                {
-                    "name": "Getting the closed captions settings",
-                    "params": [],
-                    "result": {
-                        "name": "result",
-                        "value": {
-                            "correlationId": "123",
-                            "parameters": null
-                        }
-                    }
-                }
-            ]
-        },
-        {
             "name": "enabled",
             "tags": [
                 {
@@ -67,8 +14,8 @@
                 },
                 {
                     "name": "capabilities",
-                    "x-manages": [
-                        "xrn:firebolt:capability:settings:closedcaptions"
+                    "x-uses": [
+                        "xrn:firebolt:capability:accessibility:closedcaptions"
                     ]
                 }
             ],
@@ -99,8 +46,8 @@
                 },
                 {
                     "name": "capabilities",
-                    "x-manages": [
-                        "xrn:firebolt:capability:settings:closedcaptions"
+                    "x-uses": [
+                        "xrn:firebolt:capability:accessibility:closedcaptions"
                     ]
                 }
             ],
@@ -131,8 +78,8 @@
                 },
                 {
                     "name": "capabilities",
-                    "x-manages": [
-                        "xrn:firebolt:capability:settings:closedcaptions"
+                    "x-uses": [
+                        "xrn:firebolt:capability:accessibility:closedcaptions"
                     ]
                 }
             ],
@@ -163,8 +110,8 @@
                 },
                 {
                     "name": "capabilities",
-                    "x-manages": [
-                        "xrn:firebolt:capability:settings:closedcaptions"
+                    "x-uses": [
+                        "xrn:firebolt:capability:accessibility:closedcaptions"
                     ]
                 }
             ],
@@ -195,8 +142,8 @@
                 },
                 {
                     "name": "capabilities",
-                    "x-manages": [
-                        "xrn:firebolt:capability:settings:closedcaptions"
+                    "x-uses": [
+                        "xrn:firebolt:capability:accessibility:closedcaptions"
                     ]
                 }
             ],
@@ -227,8 +174,8 @@
                 },
                 {
                     "name": "capabilities",
-                    "x-manages": [
-                        "xrn:firebolt:capability:settings:closedcaptions"
+                    "x-uses": [
+                        "xrn:firebolt:capability:accessibility:closedcaptions"
                     ]
                 }
             ],
@@ -259,8 +206,8 @@
                 },
                 {
                     "name": "capabilities",
-                    "x-manages": [
-                        "xrn:firebolt:capability:settings:closedcaptions"
+                    "x-uses": [
+                        "xrn:firebolt:capability:accessibility:closedcaptions"
                     ]
                 }
             ],
@@ -291,8 +238,8 @@
                 },
                 {
                     "name": "capabilities",
-                    "x-manages": [
-                        "xrn:firebolt:capability:settings:closedcaptions"
+                    "x-uses": [
+                        "xrn:firebolt:capability:accessibility:closedcaptions"
                     ]
                 }
             ],
@@ -323,8 +270,8 @@
                 },
                 {
                     "name": "capabilities",
-                    "x-manages": [
-                        "xrn:firebolt:capability:settings:closedcaptions"
+                    "x-uses": [
+                        "xrn:firebolt:capability:accessibility:closedcaptions"
                     ]
                 }
             ],
@@ -355,8 +302,8 @@
                 },
                 {
                     "name": "capabilities",
-                    "x-manages": [
-                        "xrn:firebolt:capability:settings:closedcaptions"
+                    "x-uses": [
+                        "xrn:firebolt:capability:accessibility:closedcaptions"
                     ]
                 }
             ],
@@ -387,8 +334,8 @@
                 },
                 {
                     "name": "capabilities",
-                    "x-manages": [
-                        "xrn:firebolt:capability:settings:closedcaptions"
+                    "x-uses": [
+                        "xrn:firebolt:capability:accessibility:closedcaptions"
                     ]
                 }
             ],

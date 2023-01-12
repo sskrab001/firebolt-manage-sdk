@@ -9,6 +9,14 @@
         {
             "name": "resetIdentifier",
             "summary": "Resets a user's identifier in the ad platform so that the advertising id that apps get will be a new value",
+            "tags": [
+                {
+                  "name": "capabilities",
+                  "x-manages": [
+                    "xrn:firebolt:capability:advertising:configuration"
+                  ]
+                }
+              ],        
             "params": [
             ],
             "result": {
@@ -37,8 +45,8 @@
                 },
                 {
                     "name": "capabilities",
-                    "x-manages": [
-                        "xrn:firebolt:capability:advertising:skipRestriction"
+                    "x-uses": [
+                        "xrn:firebolt:capability:advertising:configuration"
                     ]
                 }
             ],
